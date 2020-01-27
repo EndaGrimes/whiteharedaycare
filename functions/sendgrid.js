@@ -1,30 +1,8 @@
 const client = require("@sendgrid/mail")
 
-function sendEmail(client, message, senderEmail, senderName) {
-  return new Promise((fulfill, reject) => {
-    const data = {
-      from: {
-        email: senderEmail,
-        name: senderName
-      },
-      subject: 'Whitehare daycare - Web mail',
-      to: SENDGRID_RECIEVER_EMAIL,
-      html: `<b>Hey, you\'ve recieved a messages via your website.</b><br/>Message: ${message}`
-    }
-
-    client
-      .send(data)
-      .then(([response, body]) => {
-        fulfill(response)
-      })
-      .catch(error => reject(error))
-  })
-}
-
 exports.handler = function(event, context, callback) {
   const {
-    SENDGRID_API_KEY,
-    SENDGRID_RECIEVER_EMAIL
+    SENDGRID_API_KEY
   } = process.env
 
   const body = JSON.parse(event.body)
@@ -42,4 +20,25 @@ exports.handler = function(event, context, callback) {
   )
   .then(response => callback(null, { statusCode: response.statusCode }))
   .catch(err => callback(err, null))
+}
+
+function sendEmail(client, message, senderEmail, senderName) {
+  return new Promise((fulfill, reject) => {
+    const data = {
+      from: {
+        email: senderEmail,
+        name: senderName
+      },
+      subject: 'Whitehare daycare - Web mail',
+      to: "paddymccallan841@gmail.com",
+      html: `<b>Hey, you\'ve recieved a messages via your website.</b><br/>Message: ${message}`
+    }
+
+    client
+      .send(data)
+      .then(([response, body]) => {
+        fulfill(response)
+      })
+      .catch(error => reject(error))
+  })
 }
