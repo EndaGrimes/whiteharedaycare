@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+ <html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>White Hare Day Care</title>
+
+
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="icon" href="images\WhiteHareDaycare.jpg" type="image/jpg" sizes="16x16">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slider.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+<header id="fh5co-header-section">
+  <div class="container">
+    <div class="nav-header">
+      
+      <a href="index.html"><img src="images/WhiteHareDaycare.jpg" style="width:100px; height:100px" title="White Hare" alt="White"></a>
+      <!-- Navigation -->
+      <nav id="fh5co-menu-wrap" role="navigation">
+        <ul class="sf-menu" id="fh5co-primary-menu">
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="fh5co-sub-ddown">About Us</a>
+
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+	</head>
+
+<!-- header -->
+		<div class="fh5co-parallax" style="background-image: url(images/Personal-Training.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+						<div class="fh5co-intro fh5co-table-cell animate-box">
+							<h1 class="text-center">Contact US</h1>
+							<p></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About Us -->
+		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
+			<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <ul class="contact-info">
+		<li><i class="#"></i>416 Crockanboy Road, Creggan,</li>
+		<li><i class="#"></i>Omagh, Co. Tyrone BT79 9AF</li>
+		<li><i class="#"></i>07833291818</li>
+	</ul>
+  </div>
+  <div class="row">
+    <div class="column">
+      <!--Map -->
+		<style>
+		#map{
+			height:400px;
+			width:100%;
+		}
+	</style>
+	<div id="map"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 54.658150, lng:  -7.034728},
+          zoom: 12
+        });
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: {lat: 54.658150, lng: -7.034728},
+          title: 'Whitehare Day Care'
+        });
+      }
+
+	</script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwlKMusmYqclWsLD6NPhJtUaPs5hpxkdk&callback=initMap"
+    async defer>
+	</script>
+	
+    </div>
+
+
+    <div class="column">
+      <form>
+        <label for="fname">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name..">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your Email Address">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject">
+		<label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+		<input type="submit" id="post" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+		</div>
+
+		<script>
+			(function () {
+			document.getElementById('post').onclick = function () {
+			  axios.post('/.netlify/functions/sendgrid', 
+				  {
+					message: document.getElementById('message').value,
+					senderEmail: document.getElementById('email').value,
+					senderName: document.getElementById('name').value,
+				}).then(function (res) {
+				  alert("Sent")
+				})
+				.catch(function (err) {
+				  alert(err)
+				});
+			};
+		  })();
+		</script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+	<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 animate-box">
+							
+							<a href="index.html"><img src="images/WhiteHareDaycare.jpg" style="width:250px; height:250px; margin-top:100px" title="White Hare" alt="White"></a>
+						</div>
+
+
+						
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">Help and Advice </h3>
+							<ul class="contact-info">
+								<li class="menu__link menu__link--level-1"><a href="policies.html">Our Policies</a></li>
+							</ul>
+						</div>
+
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">Contact Information </h3>
+							<ul class="contact-info">
+								<p><font color="white">416 Crockanboy Road, Creggan,</font></p>
+								<p><font color="white">Omagh, Co. Tyrone BT79 9AF</font></p>
+								<p><font color="white">whiteharedaycare@gmail.com</font></p>
+								<p><font color="white">07833291818</font></p>
+									
+								
+							</ul>
+						</div>
+					<div class="row copy-right">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="fh5co-social-icons">
+								
+								<a href="https://www.facebook.com/White-Hare-Daycare-102504291223993/?__tn__=%2Cd%2CP-R&eid=ARCdVcBcl41y2IqgavaHItYnYIM6liZb5TUfwlg4cBc3ZKBMJBTH7R5AEuuqsLKcCurGipL9ZQX9h6qt"><i class="icon-facebook2"></i></a>
+								
+							</p>
+							<p>Copyright of <a href="index.html">White Hare Daycare</a>. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+	<script src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js'></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+
+		<script src="js/slider.js"></script>
+
+
+	</body>
+</html>
