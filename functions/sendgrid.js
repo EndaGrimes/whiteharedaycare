@@ -8,7 +8,7 @@ function sendEmail(client, message, senderEmail, senderName) {
         name: senderName
       },
       subject: 'Whitehare daycare - Web mail',
-      to: 'enda.grimes@hotmail.co.uk',
+      to: SENDGRID_RECIEVER_EMAIL,
       html: `<b>Hey, you\'ve recieved a messages via your website.</b><br/>Message: ${message}`
     }
 
@@ -23,7 +23,8 @@ function sendEmail(client, message, senderEmail, senderName) {
 
 exports.handler = function(event, context, callback) {
   const {
-    SENDGRID_API_KEY
+    SENDGRID_API_KEY,
+    SENDGRID_RECIEVER_EMAIL
   } = process.env
 
   const body = JSON.parse(event.body)
