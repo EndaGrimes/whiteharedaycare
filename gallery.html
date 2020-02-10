@@ -72,26 +72,67 @@
 			</div>
 		</div>	
 
-		<!-- About Us -->
-		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="heading-section text-center animate-box">
-							<h2>About Us</h2>
-							<p>Here at RG Fitness we offer our customers the best information, the best equipment and the best trainers for the best results.
-							RG Fitness is committed to offering top class gym and fitness class facilities at a fraction of the usual cost of health club membership, by removing the unnecessary frills.
-							Our expert trainers will help you plan your fitness goals and give you the tools and techniques you need to succeed.</p>
-						</div>
-					</div>
+		<!-- Gallery -->
+		<style>
+			div.gallery {
+			  border: 1px solid #ccc;
+			}
+			
+			div.gallery:hover {
+			  border: 1px solid #777;
+			}
+			
+			div.gallery img {
+			  width: 100%;
+			  height: auto;
+			}
+			
+			div.desc {
+			  padding: 15px;
+			  text-align: center;
+			}
+			
+			* {
+			  box-sizing: border-box;
+			}
+			
+			.responsive {
+			  padding: 0 6px;
+			  float: left;
+			  width: 24.99999%;
+			}
+			
+			@media only screen and (max-width: 700px) {
+			  .responsive {
+				width: 49.99999%;
+				margin: 6px 0;
+			  }
+			}
+			
+			@media only screen and (max-width: 500px) {
+			  .responsive {
+				width: 100%;
+			  }
+			}
+			
+			.clearfix:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			</style>
+
+			<h2>Responsive Image Gallery</h2>
+			<h4>Resize the browser window to see the effect.</h4>
+
+				<div class="responsive">
+				<div class="gallery">
+					<a target="_blank" href="images/gallery_1.jpg">
+					<img src="images/gallery_1.jpg" alt="Image 1" width="600" height="400">
+					</a>
+					<div class="desc">Add a description of the image here</div>
 				</div>
-
-
-
-
-			</div>
-		</div>
-
+				</div>
 
 
 
