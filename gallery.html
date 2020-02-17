@@ -64,8 +64,8 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 						<div class="fh5co-intro fh5co-table-cell animate-box">
-							<h1 class="text-center">Staff</h1>
-							<p>Our fantastic staff that work at White Hare Day Care</a></p>
+							<h1 class="text-center">Gallery</h1>
+							<p>Some pictures of our fantastic facilities.</a></p>
 						</div>
 					</div>
 				</div>
@@ -80,62 +80,35 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
-							<h2>Meet Our Staff</h2>
+							<h2>Gallery</h2>
 							<p></p>
 						</div>
 					</div>
 				</div>
-				<div class="row text-center">
-					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/catherine.jpg);">
-							<div class="overlay-section">
-								<div class="desc">
-									<h1><font color="white">Catherine</font></h1>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/emma.jpg);">
-							<div class="overlay-section">
-								<div class="desc">
-									<h1><font color="white">Emma</font></h1>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/isabel.jpg);">
-							<div class="overlay-section">
-								<div class="desc">
-									<h1><font color="white">Isabel</font></h1>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/lucy.jpg);">
-							<div class="overlay-section">
-								<div class="desc">
-									<h1><font color="white">Lucy</font></h1>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/sarah.jpg);">
-							<div class="overlay-section">
-								<div class="desc">
-									<h1><font color="white">Sarah</font></h1>
-								</div>
-							</div>
-						</div>
-					</div>
-					
+				<h2 class="w3-center">Automatic Slideshow</h2>
 
-				</div>
-			</div>
-		</digit stauv>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="img_la.jpg" style="width:100%">
+  <img class="mySlides" src="img_ny.jpg" style="width:100%">
+  <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 	<footer>
 			<div id="footer">
