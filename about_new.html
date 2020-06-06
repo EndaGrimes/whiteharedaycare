@@ -81,100 +81,87 @@
 							<meta name="viewport" content="width=device-width, initial-scale=1">
 							
 								</head>
-								<body>
-                                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                                    <style>
-                                    * {box-sizing: border-box}
-                                    
-                                    /* Set height of body and the document to 100% */
-                                    body, html {
-                                      height: 100%;
-                                      margin: 0;
-                                      font-family: Arial;
-                                    }
-                                    
-                                    /* Style tab links */
-                                    .tablink {
-                                      background-color: #555;
-                                      color: white;
-                                      float: left;
-                                      border: none;
-                                      outline: none;
-                                      cursor: pointer;
-                                      padding: 14px 16px;
-                                      font-size: 17px;
-                                      width: 25%;
-                                    }
-                                    
-                                    .tablink:hover {
-                                      background-color: #777;
-                                    }
-                                    
-                                    /* Style the tab content (and add height:100% for full page content) */
-                                    .tabcontent {
-                                      color: white;
-                                      display: none;
-                                      padding: 100px 20px;
-                                      height: 100%;
-                                    }
-                                    
-                                    #Home {background-color: red;}
-                                    #News {background-color: green;}
-                                    #Contact {background-color: blue;}
-                                    #About {background-color: orange;}
-                                    </style>
-                                    </head>
-                                    <body>
-                                    
-                                    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-                                    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-                                    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-                                    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-                                    
-                                    <div id="Home" class="tabcontent">
-                                      <h3>Home</h3>
-                                      <p>At White Hare Day Care we are passionate about children’s learning and education. We provide a secure, loving and caring environment for all children that come into our care.
-                                        <br>At White Hare Day Care we are passionate about children’s learning and education. We provide a secure, loving and caring environment for all children that come into our care.
-                                        <br>We work hard to build strong, respectful relationships with our children and their families from the first moment they step into our centre. We believe that we share the responsibility with parents and the wider community of working in collaboration to educate children to support them in their growth and development.
-                                        <br>We encourage a positive self-image where everyone is treated with equal respect. Our staff at White Hare Day Care role model this to our children on a daily basis to help develop sensitivity towards others, multicultural awareness and a positive approach to learning. At White Hare Day Care we do not discriminate against children or their families for reasons such as race, religion, sex or ability.
-                                        <br>We value children’s choice, allowing children to learn, grow and flourish at their own pace and ability. At White Hare Day Care we encourage independence and self-help skills in the aim of preparing children not just for school, but for life.
-                                      “Never help a child with a task at which they feel they can succeed.” – Maria Montessori
-                                      </p>
-                                  </div>
-                                    
-                                    <div id="News" class="tabcontent">
-                                      <h3>News</h3>
-                                      <p>Some news this fine day!</p> 
-                                    </div>
-                                    
-                                    <div id="Contact" class="tabcontent">
-                                      <h3>Contact</h3>
-                                      <p>Get in touch, or swing by for a cup of coffee.</p>
-                                    </div>
-                                    
-                                    <div id="About" class="tabcontent">
-                                      <h3>About</h3>
-                                      <p>Who we are and what we do.</p>
-                                    </div>
-                                    
-                                    <script>
-                                    function openPage(pageName,elmnt,color) {
-                                      var i, tabcontent, tablinks;
-                                      tabcontent = document.getElementsByClassName("tabcontent");
-                                      for (i = 0; i < tabcontent.length; i++) {
-                                        tabcontent[i].style.display = "none";
-                                      }
-                                      tablinks = document.getElementsByClassName("tablink");
-                                      for (i = 0; i < tablinks.length; i++) {
-                                        tablinks[i].style.backgroundColor = "";
-                                      }
-                                      document.getElementById(pageName).style.display = "block";
-                                      elmnt.style.backgroundColor = color;
-                                    }
-                                    
-                                    // Get the element with id="defaultOpen" and click on it
-                                    document.getElementById("defaultOpen").click();
-                                    </script>
+								<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="col-9">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>Resize the browser window to see how the content respond to the resizing.</p>
+  </div>
+</div>
 								
 
 
