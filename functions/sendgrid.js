@@ -30,7 +30,7 @@ function sendEmail(client, message, senderEmail, senderName) {
         name: senderName
       },
       subject: 'Whitehare daycare - Web mail',
-      to: "enda.grimes@hotmail.co.uk",
+      to: "declanjgrimes@aol.com",
       html: `<b>Hey, you\'ve recieved a messages via your website.</b><br/>Message: ${message}`
     }
 
